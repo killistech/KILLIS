@@ -1,0 +1,76 @@
+Important - Currently uasing search on PHP server. Try download he search data once and ;ocal Fuse search
+https://chatgpt.com/c/68c2acc1-18f0-8323-a48e-e52155cd5797
+
+
+
+Cart summary background to Gradiant -- Done
+
+Cart - add maxCartItemsCount and prePayRqrdCnt
+
+transparent header on all other screens exept home screen and align header text to left. ---Done
+
+retrieve account option on FirstLaunch -- Pending
+
+auto read OTP for android (refer to OTPREAD Ap in MyProjects) --- Pending
+
+open the list of items from search. add to cart. go to cart and update the order quantity, back button to product list screen. The order quantity on the item is not updating....fix it. -- DONE....so tricky and complex but did it..great job...check those Update() functions
+
+Last payment option auto selection on the Checkout page
+
+"Change Address" callback handling on Home page (Location bar under header), ListOrder Submit section and cart summary
+
+When moved to EAS build, in ListOrder screen, Try below ImageManipulator.useImageManipulator(); -- which is latest in Expo
+try {
+        /*****************
+         When moved to EAS build, Try below ImageManipulator.useImageManipulator(); -- which is latest in Expo
+         ******************/
+        /* if (typeof ImageManipulator.useImageManipulator === "function") {
+          console.log(222222222222);
+          // ✅ Works in dev/prod builds
+          const manipulator = ImageManipulator.useImageManipulator();
+          const resized = await manipulator
+            .resize({ width: 1000 })
+            .compress(0.7)
+            .format("jpeg")
+            .renderAsync(photo.uri);
+        } */
+        // Resize with max width 1000
+        const resized = await ImageManipulator.manipulateAsync(
+          photo.uri,
+          [{ resize: { width: 1000 } }],
+          { compress: 0.85, format: ImageManipulator.SaveFormat.JPEG }
+        );
+
+        // ------------
+
+
+
+In Cart page, When item is shown quantity unavailability, auto scroll to that item in view -- Pending
+E.g.
+function MyList() {
+      const flatListRef = useRef(null);
+      const data = Array.from({ length: 20 }, (_, i) => ({ key: String(i), text: `Item ${i}` }));
+
+      const scrollToIndex = (index) => {
+        flatListRef.current.scrollToIndex({ index, animated: true });
+      };
+
+      return (
+        <View>
+          <FlatList
+            ref={flatListRef}
+            data={data}
+            renderItem={({ item }) => (
+              <View style={{ height: 100, justifyContent: 'center', alignItems: 'center', borderBottomWidth: 1 }}>
+                <Text>{item.text}</Text>
+              </View>
+            )}
+            keyExtractor={(item) => item.key}
+          />
+          <Button title="Scroll to Item 10" onPress={() => scrollToIndex(9)} />
+        </View>
+      );
+    }
+
+
+
