@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 export default function SuccessPopUp({
   message = "Success.",
-  extraBtn = "dsfdfdgf",
+  extraBtn = "",
   extraBtnCB = "",
 }) {
   const [show, setShow] = useState(true);
