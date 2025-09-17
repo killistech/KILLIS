@@ -192,7 +192,6 @@ export default function Home({ navigation, route }) {
   };
 
   const searchDataDownload = (server_ts) => {
-    console.log(3232323);
     setGlobalVariables({ searchDataStatus: 1 });
     const TARGET_FILE = globalCONSTANTS.searchDataFile + "?" + server_ts;
     console.log(TARGET_FILE);
