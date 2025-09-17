@@ -25,6 +25,7 @@
       },
       "edgeToEdgeEnabled": true,
       "permissions": [
+        "CAMERA",
         "CAMERA"
       ],
       "package": "com.muralirnexpo.KILLIS"
@@ -36,6 +37,12 @@
       "eas": {
         "projectId": "95cf7156-d67f-4d90-a165-0a94b81725f0"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/95cf7156-d67f-4d90-a165-0a94b81725f0"
     }
   }
 }

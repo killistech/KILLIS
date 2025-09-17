@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+
+# Native project folders (EAS rebuilds them anyway)
+android
+ios
+
+# Expo cache
+.expo
+.expo-shared
+
+# Logs & temp files
+*.log
+npm-debug.*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Misc
+.DS_Store
+.git
